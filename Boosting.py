@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
 #reading the dataset
-df = pd.read_csv("testing.csv")
+df = pd.read_csv("Data.csv")
 
 # drop nan values
 df.dropna(inplace=True)

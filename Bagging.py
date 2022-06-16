@@ -7,7 +7,7 @@ from sklearn import tree
 from sklearn.preprocessing import LabelEncoder
 
 #reading the dataset
-df = pd.read_csv("testing.csv")
+df = pd.read_csv("Data.csv")
 
 # drop nan values
 df.dropna(inplace=True)

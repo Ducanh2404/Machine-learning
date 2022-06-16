@@ -7,7 +7,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.svm import SVR
 from sklearn.ensemble import StackingRegressor
 # define dataset
-df=pd.read_csv('testing.csv')
+df=pd.read_csv('Data.csv')
 X=df.drop('world',axis=1)
 y=df['world']
 # define the base models
@@ -22,6 +22,6 @@ model = StackingRegressor(estimators=level0, final_estimator=level1, cv=5)
 # fit the model on all available data
 model.fit(X, y)
 # make a prediction for one example
-data = [[63.76,57.52,63.6]]
+data = [[25.32,28.37,26.63]]
 yhat = model.predict(data)
-print('Predicted Value: %.3f' % (yhat))
+print('Dự đoán giá dầu thế giới: %.3f' % (yhat))
